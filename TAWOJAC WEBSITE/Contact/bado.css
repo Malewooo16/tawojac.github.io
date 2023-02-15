@@ -1,0 +1,158 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.container:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100%;
+  height: 100%;
+  background: url('./download.jpg') no-repeat center; 
+  background-size: contain;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.contact-box{
+  max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+  background: url('./image1.png') no-repeat center; 
+  background-size: contain;
+  height: 100%;
+  
+}
+ 
+ 
+.right{
+  padding: 25px 40px;
+}
+
+h2{
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+
+.field{
+   width: 100%;
+   padding: 0.5rem 1rem;
+   outline: none;
+   border: 2px solid rgba(0,0,0,0);
+   background-color:  rgb(249, 249, 255, 0.6);
+   font-size: 1.1rem;
+   margin-bottom: 22px;
+   transition: 0.3s;
+}
+
+.field:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+ .field:focus{
+    background-color: #ffff;
+    border: 2px solid rgba(30, 85,250,0.47)
+
+ }
+
+
+ .btn{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: #2ecc71;
+  cursor: pointer;
+  outline: none;
+  border: none; 
+  color: #fff; 
+
+ }
+
+ .btn:hover{
+  background-color: aqua;
+ }
+
+ .addres{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 200px;
+  margin-top: -100px;
+}
+
+.addres ul{
+  list-style: none;
+  color: rgb(231, 228, 228);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.addres ul li{
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.img{
+ position: relative;
+ left:-110px;
+ top: 90px;
+}
+
+
+
+ @media screen  and ( max-width: 880px){
+  
+  .contact-box{
+    grid-template-columns: 1fr ;
+}
+  .left{
+    height:200px; 
+  }
+
+
+
+ }
+
